@@ -75,6 +75,33 @@ public class StaticUtilityMethods {
 
 		return newStr;
 	}
+
+	public static int[] merge(int[] a, int[] b) {
+		int len = 0;
+		int[] mergedArr = new int[len];
+
+		if (a.length > b.length) {
+			len = a.length;
+		} else {
+			len = b.length;
+		}
+
+		for (int i = 0; i < len; i++) {
+			if (i < a.length) {
+				mergedArr[i] += a[i];
+			}
+
+			if (i < b.length) {
+				mergedArr[i+1] = b[i];
+			}
+		}
+		return mergedArr;
+	}
+	
+	public static String merge(String a, String b) {
+		return null;
+	}
+	
 }
 
 

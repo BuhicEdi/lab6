@@ -94,14 +94,8 @@ public class StaticUtilityMethods {
 		}
 
 		for (int i = 0; i < min.length; i++) {
-			System.out.println("m: " + min[i] + " m: " + max[i]);
-			if (min[i] < max[i]) {
-				mergedArr[index] = min[i];
-				mergedArr[index + 1] = max[i];
-			} else {
-				mergedArr[index] = max[i];
-				mergedArr[index + 1] = min[i];
-			}
+			mergedArr[index] = a[i];
+			mergedArr[index + 1] = b[i];
 			index = index + 2;
 		}
 

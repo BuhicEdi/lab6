@@ -1,5 +1,7 @@
 package lab6;
 
+import java.util.Arrays;
+
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
@@ -78,8 +80,10 @@ public class StaticUtilityMethods {
 
 	public static int[] merge(int[] a, int[] b) {
 		int[] mergedArr = new int[a.length + b.length];
+		System.out.println("arr: " + Arrays.toString(mergedArr));
 		int[] max;
 		int[] min;
+		int index = 0;
 
 		if (a.length > b.length) {
 			max = a;
@@ -89,15 +93,23 @@ public class StaticUtilityMethods {
 			min = a;
 		}
 
-
-		for (int h = 0; h < mergedArr.length; h = h + 2) {
-			for (int i = 0; i > min.length; i++) {
-				for (int j = 0; j < max.length; j++) {
-					mergedArr[h] = Math.max(max[j], min[i]);
-					mergedArr[h + 1] = Math.min(max[j], min[i]);
-				}
+		for (int i = 0; i < min.length; i++) {
+			System.out.println("m: " + min[i] + " m: " + max[i]);
+			if (min[i] < max[i]) {
+				mergedArr[index] = min[i];
+				mergedArr[index + 1] = max[i];
+			} else {
+				mergedArr[index] = max[i];
+				mergedArr[index + 1] = min[i];
 			}
+			index = index + 2;
 		}
+
+		for (int i = index / 2; i < max.length; i++) {
+			mergedArr[index] = max[i];
+			index++;
+		}
+
 		return mergedArr;
 	}
 

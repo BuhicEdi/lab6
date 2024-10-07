@@ -52,10 +52,8 @@ public class StaticUtilityMethods {
 	}
 
 	public static boolean checkSweEmailAddress(String email) {
-		if (email.contains(".se") && email.contains("@") && email.indexOf("@") != 0) {
-			if (email.substring((email.indexOf("@") - 1), email.indexOf("@")).isEmpty() == false) {
-				return false;
-			}
+		if (email.contains(".se") == false || email.contains("@") == false) {
+			return false;
 		}
 		return true;
 	}
@@ -67,13 +65,12 @@ public class StaticUtilityMethods {
 
 		for (int i = 1; i < strSplit.length; i++) {
 
-
-				if (strSplit[i - 1].isBlank() && strSplit[i].isBlank() == false) {
-					newStr += strSplit[i].toUpperCase();
-				} else if (strSplit[i].isBlank() == false){
-					newStr += strSplit[i];
-				}
+			if (strSplit[i - 1].isBlank() && strSplit[i].isBlank() == false) {
+				newStr += strSplit[i].toUpperCase();
+			} else if (strSplit[i].isBlank() == false){
+				newStr += strSplit[i];
 			}
+		}
 
 		return newStr;
 	}

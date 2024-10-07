@@ -52,7 +52,7 @@ public class StaticUtilityMethods {
 	}
 
 	public static boolean checkSweEmailAddress(String email) {
-		if (email.contains(".se") == false || email.contains("@") == false) {
+		if (email.contains(".se") == false || email.contains("@") == false || email.indexOf("@") == 0) {
 			return false;
 		}
 		return true;

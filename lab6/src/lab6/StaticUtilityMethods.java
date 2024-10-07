@@ -77,11 +77,21 @@ public class StaticUtilityMethods {
 	}
 
 	public static int[] merge(int[] a, int[] b) {
-		int len = Math.max(a.length, b.length);
 		int[] mergedArr = new int[a.length + b.length];
+		int[] max;
+		int[] min;
+		
+		if (a.length > b.length) {
+			max = a;
+			min = b;
+		} else {
+			max = b;
+			min = a;
+		}
+		
 
-		for (int i = 0; i < len; i++) {
-			for (int j = 0; j < len - 1; j = j + 2) {
+		for (int i = 0; i < mergedArr.length; i++) {
+			for (int j = 0; j < mergedArr.length - 1; j = j + 2) {
 				mergedArr[j] = Math.max(a[i], b[i]);
 				mergedArr[j + 1] = Math.min(a[i], b[i]);
 			}

@@ -80,7 +80,7 @@ public class StaticUtilityMethods {
 		int[] mergedArr = new int[a.length + b.length];
 		int[] max;
 		int[] min;
-		
+
 		if (a.length > b.length) {
 			max = a;
 			min = b;
@@ -88,12 +88,14 @@ public class StaticUtilityMethods {
 			max = b;
 			min = a;
 		}
-		
 
-		for (int i = 0; i < mergedArr.length; i++) {
-			for (int j = 0; j < mergedArr.length - 1; j = j + 2) {
-				mergedArr[j] = Math.max(a[i], b[i]);
-				mergedArr[j + 1] = Math.min(a[i], b[i]);
+
+		for (int h = 0; h < mergedArr.length - 1; h = h + 2) {
+			for (int i = 0; i > min.length; i++) {
+				for (int j = 0; j < max.length; j++) {
+					mergedArr[h] = Math.max(max[j], min[i]);
+					mergedArr[h + 1] = Math.min(max[j], min[i]);
+				}
 			}
 		}
 		return mergedArr;

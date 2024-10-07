@@ -10,6 +10,15 @@ public class P6_2 {
 		
 
 		System.out.println(StaticUtilityMethods.calculateSum(arr));
+		
+		String test = "edi@buhic.se";
+		
+		System.out.println(test.indexOf(".se"));
+		System.out.println(test.length());
+		
+		if (test.indexOf(".se") == (test.length()-3)) {
+			System.out.println("a");
+		}
 
 	}
 

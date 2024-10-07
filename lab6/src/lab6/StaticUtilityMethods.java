@@ -3,7 +3,6 @@ package lab6;
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
-
 	}
 
 	public static int calculateSum(int a, int b) {
@@ -52,11 +51,14 @@ public class StaticUtilityMethods {
 	}
 
 	public static boolean checkSweEmailAddress(String email) {
-		if (email.contains(".se") == false || email.contains("@") == false || email.indexOf("@") == 0) {
+		if (email.contains(".se") == false || email.contains("@") == false) {
+			return false;
+		} else if (email.indexOf('@') == 0 || email.indexOf(".se") == (email.length() - 3)) {
 			return false;
 		}
 		return true;
 	}
+
 
 	public static String convertToCamelCase(String str) {
 		str = str.trim();
@@ -64,7 +66,6 @@ public class StaticUtilityMethods {
 		String newStr = strSplit[0].toUpperCase();
 
 		for (int i = 1; i < strSplit.length; i++) {
-
 			if (strSplit[i - 1].isBlank() && strSplit[i].isBlank() == false) {
 				newStr += strSplit[i].toUpperCase();
 			} else if (strSplit[i].isBlank() == false){

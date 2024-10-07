@@ -6,7 +6,7 @@ public class StaticUtilityMethods {
 		
 	}
 	
-	public int calculateSum(int a, int b) {
+	public static int calculateSum(int a, int b) {
 		return a + b;
 	}
 	

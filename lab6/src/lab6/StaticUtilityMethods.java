@@ -90,7 +90,7 @@ public class StaticUtilityMethods {
 		}
 
 
-		for (int h = 0; h < mergedArr.length - 1; h = h + 2) {
+		for (int h = 0; h < mergedArr.length; h = h + 2) {
 			for (int i = 0; i > min.length; i++) {
 				for (int j = 0; j < max.length; j++) {
 					mergedArr[h] = Math.max(max[j], min[i]);

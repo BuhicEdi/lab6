@@ -10,15 +10,15 @@ public class StaticUtilityMethods {
 		return a + b;
 	}
 	
-	public double calculateSum(double a, double b) {
+	public static double calculateSum(double a, double b) {
 		return a + b;
 	}
 	
-	public int calculateSum(int a, int b, int c) {
+	public static int calculateSum(int a, int b, int c) {
 		return a + b + c;
 	}
 	
-	public double calculateSum(double a, double b, double c) {
+	public static double calculateSum(double a, double b, double c) {
 		return a + b + c;
 	}
 }

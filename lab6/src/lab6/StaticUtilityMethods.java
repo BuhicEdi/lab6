@@ -92,7 +92,7 @@ public class StaticUtilityMethods {
 				mergedArr[i] += a[i];
 			}
 
-			if (i < b.length) {
+			if (i < b.length - 1) {
 				mergedArr[i+1] = b[i];
 			}
 		}

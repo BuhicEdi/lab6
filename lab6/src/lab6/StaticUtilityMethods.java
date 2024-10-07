@@ -62,11 +62,9 @@ public class StaticUtilityMethods {
 
 	public static String convertToCamelCase(String str) {
 		String[] strSplit = str.split("|");
-		String newStr = "";
-
-		System.out.println(strSplit.length);
-
-		for (int i = 0; i < strSplit.length; i++) {
+		String newStr = strSplit[0].toUpperCase();
+		
+		for (int i = 1; i < strSplit.length; i++) {
 
 			if (strSplit[i].isBlank()) {
 				newStr += strSplit[i + 1].toUpperCase();

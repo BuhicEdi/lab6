@@ -67,13 +67,13 @@ public class StaticUtilityMethods {
 
 		for (int i = 1; i < strSplit.length; i++) {
 
-			if (strSplit[i].isBlank()) {
-				newStr += strSplit[i + 1].toUpperCase();
-				i++;
-			} else {
-				newStr += strSplit[i];
+
+				if (strSplit[i - 1].isBlank() && strSplit[i].isBlank() == false) {
+					newStr += strSplit[i].toUpperCase();
+				} else if (strSplit[i].isBlank() == false){
+					newStr += strSplit[i];
+				}
 			}
-		}
 
 		return newStr;
 	}

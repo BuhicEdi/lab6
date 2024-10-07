@@ -64,7 +64,7 @@ public class StaticUtilityMethods {
 		String[] strSplit = str.split("|");
 		String newStr = strSplit[0].toUpperCase();
 		
-		for (int i = 1; i < strSplit.length; i++) {
+		for (int i = 1; i < strSplit.length - 1; i++) {
 
 			if (strSplit[i].isBlank()) {
 				newStr += strSplit[i + 1].toUpperCase();

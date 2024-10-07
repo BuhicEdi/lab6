@@ -44,7 +44,9 @@ public class StaticUtilityMethods {
 		int sum = 0;
 
 		for (int i = 0; i < arr.length; i++) {
-			sum += arr[i][i];
+			for (int j = (arr.length - 1); i < 0; i--) {
+				sum += arr[i][j];
+			}
 		}
 		return sum;
 	}

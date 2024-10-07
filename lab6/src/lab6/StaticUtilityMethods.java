@@ -80,7 +80,6 @@ public class StaticUtilityMethods {
 
 	public static int[] merge(int[] a, int[] b) {
 		int[] mergedArr = new int[a.length + b.length];
-		System.out.println("arr: " + Arrays.toString(mergedArr));
 		int[] max;
 		int[] min;
 		int index = 0;

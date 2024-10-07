@@ -1,7 +1,5 @@
 package lab6;
 
-import java.util.Arrays;
-
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
@@ -54,24 +52,31 @@ public class StaticUtilityMethods {
 	}
 
 	public static boolean checkSweEmailAddress(String email) {
-		if (email.contains(".se") && email.contains("@")) {
+		if (email.contains(".se") && email.contains("@") && email.indexOf("@") != 0) {
 			if (email.substring((email.indexOf("@") - 1), email.indexOf("@")).isEmpty() == false) {
-				return true;
+				return false;
 			}
 		}
 		return true;
 	}
-	
+
 	public static String convertToCamelCase(String str) {
-		String[] strSplit = str.split("\s");
-		
+		String[] strSplit = str.split("|");
+		String newStr = "";
+
+		System.out.println(strSplit.length);
+
 		for (int i = 0; i < strSplit.length; i++) {
-			if (strSplit[i] == " ") {
-				strSplit[i + 1].toUpperCase();
+
+			if (strSplit[i].isBlank()) {
+				newStr += strSplit[i + 1].toUpperCase();
+				i++;
+			} else {
+				newStr += strSplit[i];
 			}
 		}
-		
-		return Arrays.toString(strSplit);
+
+		return newStr;
 	}
 }
 

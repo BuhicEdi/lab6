@@ -43,8 +43,8 @@ public class StaticUtilityMethods {
 	public static int calculateSum(int[][] arr) {
 		int sum = 0;
 
-		for (int i = 0; i < arr[i].length; i++) {
-			for (int j = (arr.length - 1); i < 0; i--) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; i < arr[i].length; j++) {
 				sum += arr[i][j];
 			}
 		}

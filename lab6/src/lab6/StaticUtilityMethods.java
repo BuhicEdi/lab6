@@ -81,7 +81,7 @@ public class StaticUtilityMethods {
 		int[] mergedArr = new int[len];
 
 		for (int i = 0; i < len; i++) {
-			int j = 0;
+			int j = i;
 			
 			mergedArr[j] = Math.max(a[i], b[i]);
 			mergedArr[j + 1] = Math.min(a[i], b[i]);

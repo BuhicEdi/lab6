@@ -107,9 +107,32 @@ public class StaticUtilityMethods {
 	}
 
 	public static String merge(String a, String b) {
-		return null;
-	}
+		a.trim();
+		b.trim();
+		String[] aSplit = a.split("\s+");
+		String[] bSplit = b.split("\s+");
+		String[] max;
+		String[] min;
+		String mergedStr = "";
 
+		if (a.length() > b.length()) {
+			max = aSplit;
+			min = bSplit;
+		} else {
+			max = bSplit;
+			min = aSplit;
+		}
+
+		for (int i = 0; i < min.length; i++) {
+			mergedStr += aSplit[i];
+			mergedStr += bSplit[i];
+		}
+
+		for (int i = min.length + 1; i < max.length; i++) {
+			mergedStr += max[i];
+		}
+		return mergedStr;		
+	}
 }
 
 

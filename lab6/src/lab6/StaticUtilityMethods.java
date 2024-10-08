@@ -124,8 +124,8 @@ public class StaticUtilityMethods {
 		}
 
 		for (int i = 0; i < min.length; i++) {
-			mergedStr += aSplit[i];
-			mergedStr += bSplit[i];
+			mergedStr += aSplit[i] + " ";
+			mergedStr += bSplit[i] + " ";
 		}
 
 		for (int i = min.length + 1; i < max.length; i++) {

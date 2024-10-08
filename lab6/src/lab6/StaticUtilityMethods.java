@@ -1,5 +1,7 @@
 package lab6;
 
+import java.util.Arrays;
+
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
@@ -105,13 +107,17 @@ public class StaticUtilityMethods {
 	}
 
 	public static String merge(String a, String b) {
-		a.trim();
-		b.trim();
+		a = a.trim();
+		b = b.trim();
 		String[] aSplit = a.split("\\s+");
 		String[] bSplit = b.split("\\s+");
 		String[] max;
 		String[] min;
 		String mergedStr = "";
+		
+		System.out.println(b);
+		System.out.println(Arrays.toString(aSplit));
+		System.out.println(Arrays.toString(bSplit));
 
 		if (a.length() > b.length()) {
 			max = aSplit;

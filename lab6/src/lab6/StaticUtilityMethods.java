@@ -129,7 +129,7 @@ public class StaticUtilityMethods {
 		}
 
 		for (int i = min.length + 1; i < max.length; i++) {
-			mergedStr += max[i];
+			mergedStr += max[i] + " ";
 		}
 		return mergedStr;		
 	}

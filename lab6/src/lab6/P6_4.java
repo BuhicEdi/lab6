@@ -11,6 +11,7 @@ public class P6_4 {
 		
 		
 		System.out.println(Arrays.toString(StaticUtilityMethods.merge(a, b)));
+		System.out.println(StaticUtilityMethods.merge("123  4   56789 ", "123  4   56789 "));
 
 	}
 

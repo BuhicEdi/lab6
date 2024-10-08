@@ -1,7 +1,5 @@
 package lab6;
 
-import java.util.Arrays;
-
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
@@ -124,14 +122,14 @@ public class StaticUtilityMethods {
 		}
 
 		for (int i = 0; i < min.length; i++) {
-			mergedStr += aSplit[i];
-			mergedStr += bSplit[i];
+			mergedStr += aSplit[i] + " ";
+			mergedStr += bSplit[i] + " ";
 		}
 
 		for (int i = min.length; i < max.length; i++) {
-			mergedStr += max[i];
+			mergedStr += max[i] + " ";
 		}
-		return mergedStr;		
+		return mergedStr.trim();		
 	}
 }
 

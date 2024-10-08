@@ -109,8 +109,8 @@ public class StaticUtilityMethods {
 	public static String merge(String a, String b) {
 		a.trim();
 		b.trim();
-		String[] aSplit = a.split("\s+");
-		String[] bSplit = b.split("\s+");
+		String[] aSplit = a.split("\\s+");
+		String[] bSplit = b.split("\\s+");
 		String[] max;
 		String[] min;
 		String mergedStr = "";

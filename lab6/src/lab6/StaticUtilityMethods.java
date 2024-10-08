@@ -128,7 +128,7 @@ public class StaticUtilityMethods {
 			mergedStr += bSplit[i] + " ";
 		}
 
-		for (int i = min.length + 1; i < max.length; i++) {
+		for (int i = min.length; i < max.length; i++) {
 			mergedStr += max[i] + " ";
 		}
 		return mergedStr.trim();		

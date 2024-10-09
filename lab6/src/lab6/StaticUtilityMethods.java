@@ -115,10 +115,6 @@ public class StaticUtilityMethods {
 		String[] min;
 		String mergedStr = "";
 
-		System.out.println(b);
-		System.out.println(Arrays.toString(aSplit));
-		System.out.println(Arrays.toString(bSplit));
-
 		if (a.length() > b.length()) {
 			max = aSplit;
 			min = bSplit;
@@ -143,19 +139,17 @@ public class StaticUtilityMethods {
 		int[] intFactTemp = new int[a / 2];
 
 		for (int i = 2; i < a; i++) {
-
 			if (a % i == 0) {
 				intFactTemp[index] = i;
 				index++;
 			}
 		}
-		
+
 		int[] intFactors = new int[index];
-		
+
 		for (int i = 0; i < index; i++) {
 			intFactors[i] = intFactTemp[i];
 		}
-
 		return intFactors;
 	}
 }

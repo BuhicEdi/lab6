@@ -4,13 +4,20 @@ public class Yatzy2 {
 	private Dice2[] dice;
 
 	public Yatzy2(int ... dices) {
-		for (int i = 0; i < dices.length; i++) {
-			try {
-				this.dice[i] = new Dice2(dices[i]);
-			} catch (IllegalArgumentException err) {
-				throw new IllegalArgumentException(err.getLocalizedMessage());
+
+		if (dices.length == 0) {
+			for (int i = 0; i < 5; i++) {
+				this.dice[i] = new Dice2();
 			}
-		}	
+		} else {
+			for (int i = 0; i < dices.length; i++) {
+				try {
+					this.dice[i] = new Dice2(dices[i]);
+				} catch (IllegalArgumentException err) {
+					throw new IllegalArgumentException(err.getLocalizedMessage());
+				}
+			}	
+		}
 	}
 
 	public void roll() {

@@ -1,5 +1,6 @@
 package lab6;
 
+import java.util.Arrays;
 import java.util.Random;
 /**
  * Klass som agerar 6-sidig tärning.
@@ -17,13 +18,13 @@ public class Dice2 {
 
 	// Klassens konstruktor som generar samt slår tärningen
 	public Dice2() {
-		this.value = randGenerator.nextInt(6);
+		new Dice2(6);
 	}
 	
 	public Dice2(int sides) {
 		int[] acceptableSides = {4, 6, 8, 10, 12, 20};
 		
-		if (acceptableSides.toString().contains(String.valueOf(sides))) {
+		if (Arrays.binarySearch(acceptableSides, sides) < 6) {
 			this.nbrOfSides = sides;
 		} else {
 			throw new IllegalArgumentException("Invalid amount of sides!");
@@ -32,7 +33,7 @@ public class Dice2 {
 
 	// Metod som slår tärningen
 	public void roll() {
-		this.value = randGenerator.nextInt(nbrOfSides);
+		this.value = randGenerator.nextInt(1, nbrOfSides);
 	}
 
 	// Metod som returnerar senaste slagets

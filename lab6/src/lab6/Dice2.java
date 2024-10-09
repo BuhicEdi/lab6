@@ -1,7 +1,5 @@
 package lab6;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 /**
  * Klass som agerar 6-sidig tärning.
@@ -23,9 +21,8 @@ public class Dice2 {
 	}
 
 	public Dice2(int sides) {
-		String acceptableSides = "4, 6, 8, 10, 12, 20";
 
-			if (acceptableSides.contains(String.valueOf(sides))) {
+			if (sides == 4 || sides == 6 || sides == 8 || sides == 10 || sides == 12 || sides == 20) {
 				this.nbrOfSides = sides;
 			} else {
 				throw new IllegalArgumentException("Invalid amount of sides!");

@@ -4,7 +4,7 @@ public class P6_9 {
 
 	public static void main(String[] args) {
 		try {
-			Dice2 d = new Dice2(1);
+			Dice2 d = new Dice2(2);
 			d.roll();
 			System.out.println(d.getValue());
 			System.out.println(d.toString());

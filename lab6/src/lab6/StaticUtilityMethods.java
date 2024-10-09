@@ -1,7 +1,5 @@
 package lab6;
 
-import java.util.Arrays;
-
 public class StaticUtilityMethods {
 
 	private StaticUtilityMethods() {
@@ -152,6 +150,16 @@ public class StaticUtilityMethods {
 		}
 		return intFactors;
 	}
-}
+
+	public static int recursiveSum(int a) {
+		int valSum = 0;
+
+		if (a / 10 > 0) {
+			valSum = a % 10 + recursiveSum(a / 10);
+		}
+
+		return valSum;
+	}
+} 
 
 

@@ -142,16 +142,7 @@ public class StaticUtilityMethods {
 		int index = 0;
 		int[] intFactTemp = new int[a / 2];
 
-		if (a % 2 == 0) {
-			intFactTemp[index] = 2;
-			index++;
-		}
-
-		for (int i = 3; i <= 11; i += 2) {
-
-			if (i == 7) {
-				i = 11;
-			}
+		for (int i = 2; i < a; i++) {
 
 			if (a % i == 0) {
 				intFactTemp[index] = i;

@@ -3,9 +3,11 @@ package lab6;
 import java.util.Random;
 
 public class Yatzy2 {
-	private Dice2[] dice = new Dice2[10];
+	private Dice2[] dice;
 
 	public Yatzy2(int... dices) {
+		this.dice = new Dice2[dices.length];
+		
 		if (dices.length == 0) {
 			for (int i = 0; i < 5; i++) {
 				this.dice[i] = new Dice2();
@@ -50,7 +52,7 @@ public class Yatzy2 {
 	private class Dice2 {
 
 		// Klassattribut som lagrar senaste slaget
-		private int value;
+		private int value = 0;
 		Random randGenerator = new Random();
 		private int nbrOfSides;
 

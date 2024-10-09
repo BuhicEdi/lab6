@@ -31,7 +31,7 @@ public class Dice2 {
 
 	// Metod som slår tärningen
 	public void roll() {
-		this.value = randGenerator.nextInt(1, nbrOfSides);
+		this.value = randGenerator.nextInt(nbrOfSides);
 	}
 
 	// Metod som returnerar senaste slagets
@@ -41,9 +41,6 @@ public class Dice2 {
 
 	// Metod som returnerar senaste slaget som en sträng
 	public String toString() {
-		String dice = "";
-		dice += value;
-
-		return dice;
+		return String.valueOf(value);
 	}
 }

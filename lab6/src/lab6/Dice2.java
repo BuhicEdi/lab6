@@ -13,11 +13,11 @@ public class Dice2 {
 	// Klassattribut som lagrar senaste slaget
 	private int value;
 	Random randGenerator = new Random();
-	private int nbrOfSides = 1;
+	private int nbrOfSides;
 
 	// Klassens konstruktor som generar samt slår tärningen
 	public Dice2() {
-		new Dice2(6);
+		this(6);
 	}
 
 	public Dice2(int sides) {

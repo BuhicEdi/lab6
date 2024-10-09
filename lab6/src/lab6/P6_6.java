@@ -1,6 +1,6 @@
 package lab6;
 
-public class P5_6 {
+public class P6_6 {
 
 	public static void main(String[] args) {
 		try {

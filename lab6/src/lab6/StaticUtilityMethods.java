@@ -154,12 +154,11 @@ public class StaticUtilityMethods {
 	public static int recursiveCumulativeSum(int a) {
 		int valSum = a;
 
-		if ((a / 10) > 0) {
+		if (valSum < 0) {
+			throw new IllegalArgumentException("Value can't be negative!");
+		} else if ((a / 10) > 0) {
 			valSum = (a % 10) + recursiveCumulativeSum(a / 10);
 		}
-
 		return valSum;
 	}
 } 
-
-

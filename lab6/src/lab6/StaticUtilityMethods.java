@@ -151,11 +151,11 @@ public class StaticUtilityMethods {
 		return intFactors;
 	}
 
-	public static int recursiveSum(int a) {
+	public static int recursiveCumulativeSum(int a) {
 		int valSum = 0;
 
 		if (a / 10 > 0) {
-			valSum = a % 10 + recursiveSum(a / 10);
+			valSum = a % 10 + recursiveCumulativeSum(a / 10);
 		}
 
 		return valSum;

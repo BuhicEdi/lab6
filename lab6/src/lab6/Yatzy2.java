@@ -19,7 +19,7 @@ public class Yatzy2 {
 		}
 	}
 
-	public int getValue() {
+	public int getTotalValue() {
 		int diceSum = 0;
 
 		for (int i = 0; i < dice.length; i++) {

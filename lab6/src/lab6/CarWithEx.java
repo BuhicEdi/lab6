@@ -38,7 +38,7 @@ public class CarWithEx {
 		if (fuelLevel > FUEL_TANK_VOLUME) {
 			this.fuelLevel = 55.0;
 			throw new IllegalArgumentException("Fuel exceeds tank volume!");
-		} else if (fuelLevel < 0){
+		} else if (fuel < 0){
 			throw new IllegalArgumentException("Cannot add negative liters fuel!");
 		} else {	
 			this.fuelLevel += fuel;

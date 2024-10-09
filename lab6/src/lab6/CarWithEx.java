@@ -35,8 +35,7 @@ public class CarWithEx {
 
 	// Metod som adderar bränsle i bilen beroende på om det finns utrymme
 	public void addFuel(double fuel) {
-		if (fuelLevel > FUEL_TANK_VOLUME) {
-			this.fuelLevel = 55.0;
+		if ((fuelLevel + fuel) > FUEL_TANK_VOLUME) {
 			throw new IllegalArgumentException("Fuel exceeds tank volume!");
 		} else if (fuel < 0){
 			throw new IllegalArgumentException("Cannot add negative liters fuel!");

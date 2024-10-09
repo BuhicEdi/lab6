@@ -152,10 +152,10 @@ public class StaticUtilityMethods {
 	}
 
 	public static int recursiveCumulativeSum(int a) {
-		int valSum = 0;
+		int valSum = a;
 
-		if (a / 10 > 0) {
-			valSum = a % 10 + recursiveCumulativeSum(a / 10);
+		if ((a / 10) > 0) {
+			valSum = (a % 10) + recursiveCumulativeSum(a / 10);
 		}
 
 		return valSum;

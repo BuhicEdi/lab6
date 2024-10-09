@@ -14,6 +14,11 @@ public class CarWithEx {
 	private double fuelPer10Km = 0.0;
 
 
+	public CarWithEx() {
+		this.fuelPer10Km = 0.5;
+	}
+	
+	
 	// Klassens konstruktor som efterfrågar bilens förbrukning
 	public CarWithEx(double fuelEfficiency) {
 		if (fuelEfficiency > 0) {
@@ -32,6 +37,7 @@ public class CarWithEx {
 	public void addFuel(double fuel) {
 		if (fuelLevel > FUEL_TANK_VOLUME) {
 			this.fuelLevel = 55.0;
+			throw new IllegalArgumentException("Fuel exceeds tank volume!");
 		} else {
 			this.fuelLevel += fuel;
 		}
@@ -47,6 +53,7 @@ public class CarWithEx {
 			this.fuelLevel = fuelLevel - (fuelPer10Km * distance);
 		} else {
 			this.fuelLevel = 0.0;
+			throw new IllegalArgumentException("Fuel level too low!"); 
 		}
 	}
 }

@@ -12,7 +12,6 @@ public class P6_4 {
 		
 		System.out.println(Arrays.toString(StaticUtilityMethods.merge(a, b)));
 		System.out.println(StaticUtilityMethods.merge("123  4   56789 ", "   98   654 2    42 4711"));
-		System.out.println(Arrays.toString(StaticUtilityMethods.integerFactorization(12)));
 
 	}
 

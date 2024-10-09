@@ -23,7 +23,6 @@ public class Dice2 {
 	public Dice2(int sides) {
 		int[] acceptableSides = {4, 6, 8, 10, 12, 20};
 		
-		
 		if (acceptableSides.toString().contains(String.valueOf(sides))) {
 			this.nbrOfSides = sides;
 		} else {

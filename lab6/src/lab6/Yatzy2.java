@@ -15,7 +15,7 @@ public class Yatzy2 {
 
 	public void roll() {
 		for(int i = 0; i < dice.length; i++) {
-			dice[i].roll();
+			this.dice[i].roll();
 		}
 	}
 

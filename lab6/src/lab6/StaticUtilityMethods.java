@@ -140,10 +140,10 @@ public class StaticUtilityMethods {
 
 	public static int[] integerFactorization(int a) {
 		int index = 0;
-		int[] intFactors = new int[a / 2];
+		int[] intFactTemp = new int[a / 2];
 
 		if (a % 2 == 0) {
-			intFactors[index] = 2;
+			intFactTemp[index] = 2;
 			index++;
 		}
 
@@ -154,9 +154,15 @@ public class StaticUtilityMethods {
 			}
 
 			if (a % i == 0) {
-				intFactors[index] = i;
+				intFactTemp[index] = i;
 				index++;
 			}
+		}
+		
+		int[] intFactors = new int[index];
+		
+		for (int i = 0; i < index; i++) {
+			intFactors[i] = intFactTemp[i];
 		}
 
 		return intFactors;

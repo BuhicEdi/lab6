@@ -22,12 +22,12 @@ public class Dice2 {
 
 	public Dice2(int sides) {
 
-			if (sides == 4 || sides == 6 || sides == 8 || sides == 10 || sides == 12 || sides == 20) {
-				this.nbrOfSides = sides;
-			} else {
-				throw new IllegalArgumentException("Invalid amount of sides!");
-			}
+		if (sides == 4 || sides == 6 || sides == 8 || sides == 10 || sides == 12 || sides == 20) {
+			this.nbrOfSides = sides;
+		} else {
+			throw new IllegalArgumentException("Invalid amount of sides!");
 		}
+	}
 
 	// Metod som slår tärningen
 	public void roll() {
@@ -41,6 +41,7 @@ public class Dice2 {
 
 	// Metod som returnerar senaste slaget som en sträng
 	public String toString() {
-		return String.valueOf(value);
+		String diceString = "[" + value + "]";
+		return diceString;
 	}
 }

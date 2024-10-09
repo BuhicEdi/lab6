@@ -114,7 +114,7 @@ public class StaticUtilityMethods {
 		String[] max;
 		String[] min;
 		String mergedStr = "";
-		
+
 		System.out.println(b);
 		System.out.println(Arrays.toString(aSplit));
 		System.out.println(Arrays.toString(bSplit));
@@ -136,6 +136,30 @@ public class StaticUtilityMethods {
 			mergedStr += max[i] + " ";
 		}
 		return mergedStr.trim();		
+	}
+
+	public static int[] integerFactorization(int a) {
+		int index = 0;
+		int[] intFactors = new int[a / 2];
+
+		if (a % 2 == 0) {
+			intFactors[index] = 2;
+			index++;
+		}
+
+		for (int i = 3; i <= 11; i += 2) {
+
+			if (i == 7) {
+				i = 11;
+			}
+
+			if (a % i == 0) {
+				intFactors[index] = i;
+				index++;
+			}
+		}
+
+		return intFactors;
 	}
 }
 

@@ -1,4 +1,10 @@
 package lab6;
+/**
+ * Detta program testar att generera ett felmeddelande från klassen Dice2.
+ * 
+ * @author Edi Buhic
+ * @version 2024-10-10
+ */
 
 public class P6_9 {
 
@@ -6,6 +12,7 @@ public class P6_9 {
 		try {
 			Dice2 d = new Dice2();
 			d.roll();
+			
 			System.out.println(d.getValue());
 			System.out.println(d.toString());
 		} catch (IllegalArgumentException err) {

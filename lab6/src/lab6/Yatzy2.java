@@ -43,7 +43,7 @@ public class Yatzy2 {
 		String diceString = "";
 
 		for (int i = 0; i < dice.length; i++) {
-			diceString = dice[i].toString() + " ";
+			diceString += dice[i].toString() + " ";
 		}
 
 		return diceString.trim();

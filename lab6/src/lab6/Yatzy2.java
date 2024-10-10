@@ -6,13 +6,13 @@ public class Yatzy2 {
 	private Dice2[] dice;
 
 	public Yatzy2(int... dices) {
-		this.dice = new Dice2[dices.length];
-		
 		if (dices.length == 0) {
+			this.dice = new Dice2[5];
 			for (int i = 0; i < 5; i++) {
 				this.dice[i] = new Dice2();
 			}
 		} else {
+			this.dice = new Dice2[dices.length];
 			for (int i = 0; i < dices.length; i++) {
 				try {
 					this.dice[i] = new Dice2(dices[i]);

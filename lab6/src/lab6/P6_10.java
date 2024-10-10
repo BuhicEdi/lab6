@@ -6,6 +6,8 @@ public class P6_10 {
 		try {
 			Yatzy2 y = new Yatzy2(4, 6, 8, 10);
 			y.roll();
+			System.out.println(y.getTotalValue());
+			System.out.println(y.toString());
 		} catch (IllegalArgumentException err) {
 			
 		}

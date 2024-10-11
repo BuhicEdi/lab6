@@ -1,9 +1,9 @@
 package lab6;
 /**
- * Klass som agerar en bil med egenskaper som t.ex bränslenivå och förbrukning.
+ * Klass som agerar en bil med egenskaper som t.ex bränslenivå och förbrukning med felhantering.
  * 
  * @author Edi Buhic
- * @version 2024-09-25
+ * @version 2024-10-11
  */
 
 public class CarWithEx {

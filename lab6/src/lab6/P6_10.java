@@ -3,7 +3,7 @@ package lab6;
  * Detta program testar att generera ett yatsyspel med hjälp utav klassen Yatzy2.
  * 
  * @author Edi Buhic
- * @version 2024-10-10
+ * @version 2024-10-11
  */
 
 public class P6_10 {

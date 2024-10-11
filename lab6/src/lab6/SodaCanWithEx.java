@@ -1,9 +1,9 @@
 package lab6;
 /**
- * Klass som räknar ut diverse volymer på en burk (cylinder)
+ * Klass som räknar ut diverse volymer på en burk (cylinder) med felhantering
  * 
  * @author Edi Buhic
- * @version 2024-09-25
+ * @version 2024-10-11
  */
 
 public class SodaCanWithEx {
@@ -12,7 +12,7 @@ public class SodaCanWithEx {
 	private double height;
 	private double radius;
 
-	// Klassens konstruktor som tar emot och lagrar burkens höjd samt radie
+	// Klassens konstruktor som tar emot och lagrar burkens höjd samt radie ifall värdena är korrekta
 	public SodaCanWithEx(double height, double radius) {
 
 		if (height > 0) {		
@@ -26,7 +26,6 @@ public class SodaCanWithEx {
 		} else {
 			throw new IllegalArgumentException("Radius cant be negative!");
 		}
-
 	}
 
 	// Metod som returnerar burkens höjd

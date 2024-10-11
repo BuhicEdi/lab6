@@ -3,7 +3,7 @@ package lab6;
  * Detta program testar metoden calculateSum ur klassen StaticUtilityMethods.
  * 
  * @author Edi Buhic
- * @version 2024-10-10
+ * @version 2024-10-11
  */
 
 public class P6_2 {

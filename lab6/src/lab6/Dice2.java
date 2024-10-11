@@ -2,10 +2,10 @@ package lab6;
 
 import java.util.Random;
 /**
- * Klass som agerar 6-sidig tärning.
+ * Klass som genererar en tärning beroende på antal sidor samt med felhantering
  * 
  * @author Edi Buhic
- * @version 2024-09-25
+ * @version 2024-10-11
  */
 
 public class Dice2 {

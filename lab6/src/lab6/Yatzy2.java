@@ -9,6 +9,8 @@ import java.util.Random;
  */
 
 public class Yatzy2 {
+	
+	// Klassattribut
 	private Dice2[] dice;
 
 	// Konstruktor som tar emot antalet tärningar samt deras sidor.

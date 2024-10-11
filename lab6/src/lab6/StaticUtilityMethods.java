@@ -6,8 +6,6 @@ package lab6;
  * @version 2024-10-11
  */
 
-
-
 public class StaticUtilityMethods {
 
 	// Privat konstruktor

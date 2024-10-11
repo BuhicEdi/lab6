@@ -78,7 +78,7 @@ public class StaticUtilityMethods {
 
 		boolean containsAt = false;
 
-		for (int i = 0; i < email.length(); i++) {
+		for (int i = 1; i < email.length(); i++) {
 			if (email.charAt(i) == '@' && containsAt == false) {
 				containsAt = true;
 			} else if (email.charAt(i) == '@' && containsAt == true) {
